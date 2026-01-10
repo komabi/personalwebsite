@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dr Marianna B. Korsós — CV</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --card: rgba(255,255,255,.06);
+    --card2: rgba(255,255,255,.09);
+    --text: rgba(255,255,255,.92);
+    --muted: rgba(255,255,255,.70);
+    --line: rgba(255,255,255,.12);
+    --accent: #b9c4ff;
+    --shadow: 0 14px 50px rgba(0,0,0,.35);
+    --radius: 22px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbfbfd;
+      --card: rgba(0,0,0,.04);
+      --card2: rgba(0,0,0,.06);
+      --text: rgba(0,0,0,.90);
+      --muted: rgba(0,0,0,.65);
+      --line: rgba(0,0,0,.10);
+      --accent: #3b5bff;
+      --shadow: 0 14px 50px rgba(0,0,0,.10);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    background: radial-gradient(1100px 680px at 12% -10%, rgba(185,196,255,.35), transparent 55%),
+                radial-gradient(900px 560px at 88% 0%, rgba(255,211,224,.25), transparent 55%),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 80px; }
+  .topbar {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: blur(10px);
+    background: color-mix(in oklab, var(--bg) 85%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar .inner {
+    max-width: 1080px; margin: 0 auto; padding: 10px 18px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { display:flex; align-items:center; gap:10px; min-width: 200px; }
+  .dot { width:10px; height:10px; border-radius:99px; background: var(--accent); box-shadow: 0 0 0 6px color-mix(in oklab, var(--accent) 20%, transparent); }
+  .brand b { font-size: 14px; letter-spacing: .2px; }
+  nav { display:flex; flex-wrap:wrap; gap: 10px; justify-content:flex-end; }
+  nav a {
+    font-size: 13px;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--muted);
+  }
+  nav a:hover {
+    color: var(--text);
+    border-color: var(--line);
+    background: color-mix(in oklab, var(--card2) 75%, transparent);
+    text-decoration: none;
+  }
+
+  .hero {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .hero .left { padding: 26px; }
+  h1 {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.6px;
+  }
+  .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+  .chips { display:flex; flex-wrap:wrap; gap: 8px; margin: 12px 0 18px; }
+  .chip {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: color-mix(in oklab, var(--card2) 75%, transparent);
+    color: var(--muted);
+  }
+  .links { display:flex; flex-wrap:wrap; gap: 10px; margin-top: 14px; }
+  .btn {
+    display:inline-flex; align-items:center; gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: color-mix(in oklab, var(--card2) 72%, transparent);
+    color: var(--text);
+    font-size: 13px;
+  }
+  .btn:hover { text-decoration:none; border-color: color-mix(in oklab, var(--accent) 55%, var(--line)); }
+  .photo {
+    overflow:hidden;
+    border-radius: var(--radius);
+  }
+  .photo img { width:100%; height:100%; object-fit: cover; display:block; }
+  .grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .col6 { grid-column: span 1; }
+  .col12 { grid-column: span 1; }
+  @media (max-width: 900px) {
+    .col6 { grid-column: span 1; }
+  }
+  .section {
+    padding: 18px 18px 12px;
+  }
+  .section h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    letter-spacing: .2px;
+  }
+  .meta { color: var(--muted); font-size: 13px; }
+  .bullets {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: var(--text);
+  }
+  .bullets li { margin: 8px 0; }
+  details {
+    border-top: 1px solid var(--line);
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 13px;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display:none; }
+  footer {
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+
+.year {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+.talk-type {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand"><span class="dot"></span><b>Dr Marianna B. Korsós</b></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#affiliations">Affiliations</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#grants">Grants</a>
+        <a href="#supervising-activities">Supervising</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#professional">Professional standing</a>
+        <a href="#refereeing-responsibilities">Refereeing</a>
+        <a href="#member">Membership</a>
+       <a href="#outreach">Outreach</a>
+        <a href="#languages">Languages</a>
+        <a href="#presentations">Presentations</a>
+
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero" id="about">
+      <div class="card left">
+        <h1>Dr Marianna B. Korsós</h1>
+        <div class="subtitle">Solar physicist • Space Weather </div>
+
+        <div class="meta">
+          <div><b>Email:</b>komabi@gmail.com </div>
+          <div style="margin-top:6px;"><b>Google Scholar:</b> <a href='https://scholar.google.com/citations?user=VMw-O2wAAAAJ&amp;hl=en'>profile</a></div>
+          <div style="margin-top:6px;"><b>ORCID:</b> <a href='https://orcid.org/0000-0002-0049-4798'>profile</a></div>
+          <div style="margin-top:6px;"><b>Linkdin:</b> <a href='https://www.linkedin.com/in/kors%C3%B3s-marianna-7005a22b7/'>profile</a></div>
+        </div>
+
+     
+        <details>
+          <summary>I am a solar physicist whose research focuses on understanding the pre-eruptive evolution of the source regions of the largest solar eruptions in the Solar System—solar flares and coronal mass ejections (CMEs). These source regions, known as solar active regions, host the complex magnetic structures that give rise to major eruptive activity. My work centres on the magnetic field evolution of active regions prior to eruption, with the aim of identifying characteristic signatures that indicate when an active region is becoming ready to erupt. I am particularly interested in the role of so-called active longitudes, where solar eruptions preferentially occur. These long-lived longitudinal zones are characterised by enhanced magnetic flux emergence, making the active regions that form there more magnetically complex and therefore more prone to producing hazardous flares and CMEs. I combine observational solar physics with advanced data analysis and machine-learning techniques to improve short- and medium-term space-weather prediction. In addition to my research, I serve as Deputy Chair of the UK Solar Physics community, contributing to community building, mentoring, and outreach. </summary>
+          <div class="meta" style="margin-top:10px;">
+              
+          </div>
+        </details>
+      </div>
+
+      <div class="card photo" aria-label="Portrait">
+        <img alt="Portrait photo" src="marianna.jpeg">
+      </div>
+    </div>
+
+    <div class="grid">
+
+
+      <section class="card section col6" id="affiliations">
+        <h2>Affiliations</h2>
+        <ul class='bullets'>
+<li>2024 May - 2027 April: Leverhulme Early Career Fellow University of Sheffield, Sheffield, UK</li>
+<li>2022 October - present: Senior Research Visitor at Department of Astronomy, Eötvös Lóránd University, Budapest, Hungary</li>
+<li>2022 June - 2024 May: Post-Doctoral Research Assistant University of Catania, Catania, Sicily, Italy</li>
+<li>2022 September - 2024 May: Research visitor status University of Sheffield, Sheffield, UK</li>
+<li>2019 September - 2022 December: Post-Doctoral Research Assistant Aberystwyth University, Aberystwyth, UK</li>
+<li>2019 April - 2019 August: Post-Doctoral Research Assistant University of Sheffield, Sheffield, UK</li>
+<li>2015 April - 2018 December: PhD student University of Sheffield, Sheffield, UK</li>
+<li>2014 September - 2015 March: Research Assistant University of Sheffield, Sheffield, UK</li>
+<li>2017 May - present: Research visitor status Department of Astronomy, Eötvös Lóránd University, Budapest, Hungary</li>
+<li>2011 September - 2019 September: Junior Research Assistant Heliophysical Observatory Debrecen, Research Centre for Astronomy and Earth Sciences, Konkoly Thege Miklós Astronomical Institute, Hungarian Academy of Sciences, Debrecen, Hungary</li>
+<li>2011 February - 2011 September: Solar Observation Assistant Heliophysical Observatory Debrecen, Research Centre for Astronomy and Earth Sciences, Konkoly Thege Miklós Astronomical Institute, Hungarian Academy of Sciences, Debrecen, Hungary</li>
+</ul>
+      </section>
+
+      <section class="card section col6" id="education">
+        <h2>Education</h2>
+        <ul class='bullets'>
+<li>Dept. of Astronomy, Eötvös Lóránd University, Budapest, Hungary Ph.D., 2020 January Field: Developing flare prediction method, analyses of Debrecen sunspot data catalogue</li>
+<li>School of Mathematics and Statistics, University of Sheffield, Sheffield, UK Ph.D., 2019 January Field: Flare prediction, data analyses of MHD simulation, magnetic field extrapolation, magnetic helicity calculation, solar observations</li>
+<li>Dept. of Astronomy, Eötvös Lóránd University, Budapest, Hungary M.Sc., Astronomy/Astrophysics, 2008 Field: Cosmology, Ia Supernova, Data Analyses</li>
+</ul>
+      </section>
+      
+      <section class="card section col12" id="awards">
+  <h2>Awards</h2>
+  <ul class='bullets'>
+<li>Recognition of supervisory role for two award-winning student projects at the 2024 Astronomy Student Scientific Conference , Budapest, Hungary, December 2024</li>
+<li>Excellence Award for Outstanding Research Results, New Hungarian National Excellence Program (ÚNKP) , Budapest, Hungary, December 2023</li>
+<li>Young Scientist Award - IAUS335 2nd prize IAU International Space Weather Symposium, UK, July 2017</li>
+<li>Women in Science Excellence Award - Space Physics Hungarian Academy of Sciences, Budapest, Hungary, March 2016</li>
+</ul>
+</section>
+      
+      <section class="card section col12" id="grants">
+        <h2>Grants</h2>
+        <ul class='bullets'>
+<li>4-year Hungarian PhD scholarship 2025–2029. I am the main supervisor of the PhD student Kornél Császár who is studying the long-term evolution of active longitudes at Eötvös Loránd University (ELTE), Hungary , ~£40,000</li>
+<li>CoI COMMERCIAL APPLICATIONS OF SPACE WEATHER DATA FS - EXPRO+1-12676 2025 (with PI Soley hungarian telescope company and Hungarian Solar Physics Foundation for a new type of telescope development ) ~€20,000</li>
+<li>PI- UK with UKSP: Support to hold the 3-day UK Solar Community Meeting in April 2025, Science and Technology Facilities Council (STFC) – UKRI, ~£4500</li>
+<li>PI- UK with UKSP: For supporting Early Career Researchers&#x27; travel and accommodation, they can attend the 3-day UK Solar Community Meeting in April 2025., Royal Astronomical Society Grant category: Funding for Meetings, 2024-25, ~£2500</li>
+<li>CoI for hosting the &quot;Introductory Course in Solar and Solar Terrestrial Physics summer school&quot; at University of Sheffield in 2024, ~£21485</li>
+<li>PI (New National Excellence Program of Hungary for my work on &quot; Developing a new flare prediction tool &quot;, 2023-2024) ~€6500</li>
+<li>PI -UK on the joint UKSP and MIST Zoom licenses for community enhancement, Royal Astronomical Society Grant category: Funding for Meetings, 2023-24, ~£990</li>
+<li>PI (Leverhulme Trust Early Career Fellowship - ID/Ref: ECF-2023-271: Novel solar eruption prediction method for future precise flare forecasting 2024-2027 at the University of Sheffield, UK) ~£26000/year + ~£6000/year for travel</li>
+<li>PI (New National Excellence Program of Hungary for my work on &quot; Leap forward in Space Weather forecasting&quot;, 2022-2023) ~€6500</li>
+<li>CoI and Lead Observer (with Prof. R. Erdélyi University of Sheffield [PI], A. Veronig University of Graz [CoI], Observers: M. Korsós University of Catania [CoI], R Jarolim University of Graz [CoI],D. Kuridze Aberystwyth University [CoI] &#x27;Mutli-height magnetic field measurements using a magneto-optical filter for neural network driven magnetic field simulations&#x27; has been awarded 10 days with the SST from the SOLARNET Access programme.</li>
+<li>CoI ( with Prof. R. Erdélyi University of Sheffield [PI], [COIs] M. K. Griffiths U. Sheffield, P. Chatterjee and S. Dey IIA India, N. Magyar KU Leuven, B. Asztalos ELTE, 3-year of computation time on DIRACT super computer via EPCC to study the &quot;Radiative MHD simulations of solar spicules and coronal swirls in presence of magnetic flux emergence” )</li>
+<li>CoI (with Prof F. Zuccarello, INAF-Catania ,[PI]; B. Luo, NSSC, Chinese Academy of Sciences, [COI]) on “Step forward in solar flare and coronal mass ejection (CME) forecasting” is funded by International Space Science Institute.: The funding covers a series of workshops at the National Academy of China in Beijing and at ISSI, Bern over a period of two years 2022-24. 12 leading institutes are involved in the project.</li>
+<li>CoI -UK (with Prof. A. Hillier , University of Exeter, UK , [PI] ; Dr J. Coxon, University of Southampton, UK, [COI]) on UKSP and MIST Zoom licenses for community enhancement, Royal Astronomical Society Grant category: Funding for Meetings, 2020-21, ~€864</li>
+<li>CoI-UK (with Dr Chen, PI-CN, NAOC, CAS, China; CoIs: Prof Petrovay, ELTE Hungary; Dr Korsós), UoW, Aberystwyth, UK; Prof Deng, Dir, Huairou Solar Observatory, CAS`, Monitoring and Forecasting of the Source of Space Weather and Space Climate&#x27;, CAS, 2020-21, CYN100k</li>
+<li>PI SOLARNET Mobility grant (visiting Prof Francesca Zuccarello, University of Catania), 2019, ~€3000</li>
+<li>CoI (with Dr B. Belucz Eötvös Univesty, Budapest,[COI]; Mr J. Temesvary, Gyula Solar Observatory, [COI] ; Prof R. von Fay-Siebenburgen, University of Sheffield, [PI] ), `Energetic modernisation of GSO&#x27;, Modern Cities Infrastructure Fund, Hungary, 2018 HUF29M</li>
+<li>CoI (with Dr B. Belucz Eötvös Univesty, Budapest,[COI]; Mr J. Temesvary, Gyula Solar Observatory, [COI] ; Prof R. von Fay-Siebenburgen, University of Sheffield, [PI]), `Refurbishing GSO&#x27;, Modern Cities Infrastructure Fund, Hungary, 2018 HUF9M</li>
+<li>CoI (University of Sheffield: Mr Sharma [PI], Dr Verth[COI], Prof von Fay-Siebenburgen[COI]), `Dynamics of quiet-Sun spicules: A multi-wavelength perspective&#x27;, SOLARNET DST, 2016, 7 days observing time, Spring 2016</li>
+<li>PI Open Research Program of KLSA of CAS National Astronomical Observatory of China, Chinese Academy of Science (CAS) ~€5000, 2016</li>
+<li>CoI-Observer (University of Sheffield: Dr P Keys [PI]; QUB: Prof Mathioudakis[COI]; Drs V. Henriques[COI], D. Jess[COI]; University of Sheffield: Drs C. Nelson[COI], G. Verth[COI], Prof R. von Fay-Siebenburgen[COI]), `Identifying MHD waves in quiet Sun magnetic elements&#x27;, SOLARNET SST, 2016, 7 days observing time, Spring 2016</li>
+</ul>
+        
+      </section>
+    
+ 
+ <section class="card section col12" id="supervising-activities">
+  <h2>Supervising activities</h2>
+  <ul class='bullets'>
+<li>Kornel Csaszar, Eötvös Lóránd University , Hungary, PhD student, Main supervisor on &quot;Studying the Long-Term Evolution of Active Longitude&quot;, (2025-2029)</li>
+<li>Augustin André-Hoffmann, University of Sheffield, PhD project, UK, Co-supervised Prof Róbert Erdélyi and Prof Alexander Nindos, Prof Spiros Patsourakos, and Prof Manolis Georgoulis on &quot;Developing a method to analyze and identify the temporal evolution of transient brightenings around the polarity inversion line (PIL) before solar eruptions &quot;, (2021-2026)</li>
+<li>Kornel Csaszar, Eötvös Lóránd University , Hungary, MsC student, Main supervisor on &quot;Studying the Long-Term Evolution of Active Longitude&quot;, (2023-2025)</li>
+<li>Simone Chierichini, University of Sheffield, PhD project, UK, Co-supervised Prof Róbert Erdélyi and Dr Jiajia Liu on &quot;Machine Learning applications in Space Weather &quot;, (2021-2025)</li>
+<li>Shreeyesh Biswal, University of Sheffield, PhD project, UK, Co-supervised Prof Róbert Erdélyi on &quot;Dynamic evolution of solar active regions before solar flares &quot;, (2021 - 2026)</li>
+<li>Richard Grimes, The Aberystwyth University, PhD project, UK, Co-supervised Drs Balázs Pintér and Huw Morgan on &quot; Analysing the Rotation of Sunspots &quot;, (2020 -2022)</li>
+<li>Szabolcs Soós, Eötvös Lóránd University, Hungary, PhD project, Co-supervised Prof Róbert Erdélyi on &quot; Statistical analysis of CMEs based on solar activity &quot;, (2020-2025)</li>
+<li>Anett Elek, University of Debrecen, Hungary, PhD project, Co-supervised Prof Róbert Erdélyi on &quot; Spatio-Temporal Distribution of Faculae based on SDO Observations&quot;, (2019-2026)</li>
+</ul>
+</section>
+
+ <section class="card section col12" id="teaching">
+   <h2>Teaching</h2>
+   <ul class='bullets'>
+       <li>University of Sheffield – Instructor for Space Weather course and lecturing on Solar Activity, Instructor for MATLAB, Numerical Optimisation and Signal Processing, BSc level Mathematics, 2024–2027.</li>
+<li>Eötvös Lóránd University PhD Lecturing, Space Weather, 2020</li>
+<li>University of Sheffield, Demonstrator &amp; Tutor First year maths, LatTeX, Html, R, 2018/2019</li>
+<li>University of Debrecen MSc Lecturing, Space Weather, 2013</li>
+</ul>
+   
+ </section>
+ <section class="card section col12" id="professional">
+     <h2>Professional standing</h2>
+     <ul class='bullets'>
+         <li>Member of SOC of NAM2026 , July 20-24, 2026, Birmingham, UK</li>
+         <li>Member of SOC of Heliophysics in Europe meetings (Online seminars, Workshops in person or Online during each year.)</li>
+         <li>Organiser of 3-day UK Solar Community Meeting, 14-16 April 2025, Sheffield, UK</li>
+         <li>Impacts of Space Weather, STFC Introductory Course in Solar and Solar-Terrestrial Physics, 1-6 September 2024, September, UK</li>
+         <li>Organiser of the final ISSI-BJ Meeting on &quot;Step forward in solar flare and coronal mass ejection (CME) forecasting&quot;, 08 December 2023</li>
+         <li>Organiser of ESWW2023 Topical Discussion Meeting-&quot;Advancing Space Weather and Space Climate: Fostering Collaboration and Enhancing Infrastructure and Data Management&quot;, 20-24 November 2023</li>
+         <li>Organiser of the second ISSI-BJ Meeting on &quot;Step forward in solar flare and coronal mass ejection (CME) forecasting&quot;, 11 July 2023</li>
+         <li>Organiser of SOLARNET Summer School 3, 25 - 30 June 2023</li>
+         <li>Organiser of SWATNet Summer School 3, 12-14 June 2023</li>
+         <li>Organiser of UKSP Early Career Researcher Conference and UK Missions Forum, 20-21 April 2023</li>
+         <li>Organiser of ESWW2022 section, 24-28 October 2022</li>
+         <li>Organiser of AOGS2022 section, 1-5 August 2022</li>
+         <li>Organiser of two NAM2022 solar sections, 11 - 15 July 2022</li>
+         <li>Organiser of the first ISSI-BJ Meeting on &quot;Step forward in solar flare and coronal mass ejection (CME) forecasting&quot;, 20 - 24 June 2022</li>
+         <li>Organiser of two NAM2021 solar sections, online meeting, 19 - 23 July 2021</li>
+         <li>Organiser of UKSP Specialist Discussion Days, online meeting, 30-31 July 2020</li>
+         <li>Organiser of UKSP business meeting, online meeting, 13 July 2020</li>
+         <li>Organiser of the online seminar series, UK-based Solar Online Seminar Series – UK-SOSS, from March 2020</li>
+         <li>Assistant to LOC, AOGS 15th Annual Meeting, Hawaii, Honolulu, USA, 3-8 Jun 2018</li>
+         <li>Member of LOC, 15th European Solar Physics Meeting, Budapest, Hungary, 4-8 September 2017</li>
+         <li>Member of LOC, STFC Advance Summer School in Solar System Physics, Sheffield, UK, 4-9 September 2016</li>
+         <li>Member of LOC, Joint BUKS 2015 and Ruderman Honorary meetings, Budapest, Hungary, 25-29 May 2015</li>
+         <li>Assistant to LOC, STFC Solar-Terrestrial Physics Introductory Summer School, Budapest, Hungary, 26-30 August 2013</li>
+         <li>Member of LOC, SOTERIA 2nd General Meeting, Debrecen, Hungary, 5-7 October 2010</li>
+     </ul>
+     
+ </section>
+ 
+ <section class="card section col12" id="refereeing-responsibilities">
+<h2>Refereeing responsibilities</h2>
+<ul class='bullets'>
+<li>Academic Editor of ICCK Transactions on Artificial Intelligence in Space, 2025 September</li>
+<li>Editorial Board Member of Scientific Reports (online peer-reviewed open access scientific mega journal published by Nature Portfolio), 2022 April</li>
+<li>Guest Editor of The Journal of Space Weather and Space Climate, Special Issue: &quot;Radiation impact during space missions&quot;, 2021 November</li>
+<li>Guest Editor of Science Partner Journals - Space Science And Technology Special Issues, Special Issue: ”Artificial Intelligence in Space Weather Forecast”, 2021 May</li>
+<li>Referee to Journal of Space Weather and Space Climate, Frontiers in Astronomy and Space Sciences, Advances in Space Research, Solarphysics, New Astronomy, Astronomy and Astrophysics, The Astrophysical Journal</li>
+<li>Referee responsibility for funding applications: National Science Center - Poland, National Science Foundation- US, UK Research and Innovation -UK</li>
+<li>PhD viva external for: 1 at University of Coimbra:1, 5 at Eötvös Lóránd University.</li>
+</ul>
+</section>
+ 
+ 
+ <section class="card section col6" id="member">
+   <h2>Membership</h2>
+   <ul class='bullets'>
+<li>2023 February - present: Member of two working groups: (i) Secratery of Operational activities, infrastructure, data and models and (ii) Diversity, equity, and inclusion European Space Weather and Space Climate Association (E-SWAN)</li>
+<li>2022 September - 2028 October: Deputy Chair UK Solar Physics community, Specialist Scientific Group affiliated to the Royal Astronomical Society</li>
+<li>2021 November-present: Founding member European Space Weather and Space Climate Association (E-SWAN)</li>
+<li>2021 September - 2025 August: Supervisory Board member Space Weather Awareness Training Network (SWATNet)</li>
+<li>2021 June-present: Member of European Solar Physics Division, European Physical Society</li>
+<li>2021 May-present: National contact European Solar Telescope Contest for Schools</li>
+<li>2021 March-present: Fellow Royal Astronomical Society</li>
+<li>2020 June-2021 November: Founding member Quo Vadis European Space Weather Community</li>
+<li>2020 January-present: Member, national representative in the Working Group for Diversity and Inclusion European Astronomical Society</li>
+<li>2020 June - present: Junior Member International Astronomical Union</li>
+<li>2019 September - 2022 September: Ordinary Council PDRA Member UK Solar Physics community, Specialist Scientific Group affiliated to the Royal Astronomical Society</li>
+<li>2016 October - present: Advisory Board member and Social media director Hungarian Solar Physics Foundation Gyula, Hungary</li>
+</ul>
+ </section>
+ 
+
+
+      <section class="card section col12" id="outreach">
+        <h2>Outreach</h2>
+        <ul class='bullets'>
+<li>writing outreach articles in e.g.: Conversation, All About Space magazine</li>
+<li>public outreach talks</li>
+<li>organising public daytime and nighttime telescope viewing</li>
+</ul>
+      </section>
+    
+    <section class="card section col12" id="languages">
+<h2>Languages</h2>
+<ul class='bullets'>
+<li>English (intermediate)</li>
+<li>German (basic)</li>
+<li>Hungarian (mother tongue)</li>
+</ul>
+</section>
+
+
+
+      <section class="card section col12" id="presentations">
+  <h2>List of Oral and Poster Presentations</h2>
+  <h3 class="year">2025</h3>
+  <ul class="bullets">
+    <li>Where do solar storms prefer to originate from: hemispheric and longitudinal patterns in solar cycles 23 and 24, European Space Weather Week 2025, Umeå, Sweden, 27 October – 31 October 2025 <span class="talk-type">(Poster)</span></li>
+    <li>Using Active Region Properties to Predict Solar Flares, The XVIIIth Hvar Astrophysical Colloquium (HAC2025), Hvar, Croatia, 15–19 September 2025 <span class="talk-type">(Invited talk)</span></li>
+    <li>Using magnetic field properties to forecast solar eruptions, IAGA/IASPEI Joint Scientific Meeting 2025, Lisbon, Portugal, 31 Aug – 5 Sept 2025 <span class="talk-type">(Invited talk)</span></li>
+    <li>Why we haven’t predicted the last three X-class flares, Special School on Solar Flares (2024/25), ICRANet Coordinating Center of Pescara, Online, 26 May 2025 <span class="talk-type">(Invited talk)</span></li>
+    <li>Catching the Spark: Predicting Solar Flares Before They Ignite, Women in Solar Physics Webinar Series (IAU), Online, 15 May 2025 <span class="talk-type">(Invited talk)</span></li>
+    <li>What Could Bridge the Gap Between Longer and Shorter-Term Solar Flare Prediction Methods? – Active Longitude, Sun, Space Weather, and Solar-Stellar Connection Conference, Indian Institute of Astrophysics, Bengaluru, India, 20–24 January 2025 <span class="talk-type">(Invited talk)</span></li>
+    <li>Harmonising Long-Term and Short-Term Solar Flare Predictions, Sun Yat-sen University, Zhuhai, China, 16 January 2024 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+  </ul>
+  <h3 class="year">2024</h3>
+  <ul class="bullets">
+    <li>What Could Bridge the Gap Between Longer and Shorter-Term Solar Flare Prediction Methods?, Purple Mountain Observatory, Nanjing, China, 24 December 2024 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+    <li>Overview about Space Weather Research, Ningbo University, Ningbo, China, 18 December 2024 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+    <li>Harmonising Long-Term and Short-Term Solar Flare Predictions, ESWW 2024, Coimbra, Portugal, 4–8 November 2024 <span class="talk-type">(Poster)</span></li>
+    <li>Where are we with the short- to medium-term flare predictions?, UK Space Weather and Space Environment Meeting II, Exeter, UK, 9–12 September 2024 <span class="talk-type">(Invited talk)</span></li>
+    <li>Impacts of Space Weather, STFC Introductory Course in Solar and Solar-Terrestrial Physics, UK, 1–6 September 2024 <span class="talk-type">(Invited talk)</span></li>
+    <li>Where are we with the short- to medium-term flare predictions?, XXXII IAU General Assembly, Cape Town, South Africa, 6–15 August 2024 <span class="talk-type">(Invited talk)</span></li>
+    <li>First insights into the applicability and importance of different 3D magnetic field extrapolation approaches for studying pre-eruptive conditions, COSPAR 2024, Busan, South Korea, 13–21 July 2024 <span class="talk-type">(Oral talk)</span></li>
+    <li>Characterising Atmospheric Oscillatory Behavior of Magnetic Helicity Flux in Eruptive and Non-eruptive Active Regions, AOGS 2024, South Korea, 23–28 June 2024 <span class="talk-type">(Oral talk)</span></li>
+    <li>Space weather: From the solar perspective, School of Earth and Space Sciences, University of Science and Technology of China, Hefei, China, 28–29 February 2024 <span class="talk-type">(Invited mini course)</span></li>
+    <li>What Could Bridge the Gap Between Longer and Shorter-Term Solar Flare Prediction Methods?, National Astronomical Observatory of China (CAS), Beijing, China, 18 January 2024 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+  </ul>
+  <h3 class="year">2023</h3>
+  <ul class="bullets">
+    <li>First insights into the applicability and importance of different 3D magnetic field extrapolation approaches for studying pre-eruptive conditions, Solarnet-S3, Venezia Mestre, Italy, 11–15 September 2023 <span class="talk-type">(Oral talk)</span></li>
+    <li>Investigating the level of importance of different 3D extrapolation models in terms of flare forecasting, National Astronomy Meeting 2023 (NAM2023), Cardiff, UK, 3–7 July 2023 <span class="talk-type">(Poster)</span></li>
+    <li>Life after PhD, SOLARNET Summer School: Solar atmospheric dynamics – From waves to instabilities and jets, Gyula, Hungary, 25–30 June 2023 <span class="talk-type">(Invited talk)</span></li>
+    <li>Warnings from History – The Carrington Event Was Not Unique, SWATNet Summer School 3, Budapest, Hungary, 12–14 June 2023 <span class="talk-type">(Invited talk)</span></li>
+    <li>Application of different flare predictor proxies in 3D to increase the prediction time windows, Isradynamics 2023, Israel, 7–14 March 2023 <span class="talk-type">(Invited talk)</span></li>
+    <li>On the connection between Rieger-type and magneto-Rossby waves driving the frequency of large solar eruptions during Solar Cycles 19–25, HAO/NCAR workshop on intermediate time-scales, USA, 9–13 January 2023 <span class="talk-type">(Invited talk (Online))</span></li>
+  </ul>
+  <h3 class="year">2022</h3>
+  <ul class="bullets">
+    <li>How the magneto-Rossby waves and Rieger-type periods identify the upcoming intense flare and CME periods?, Space Climate 8 Symposium, Krakow, Poland, 19–22 September 2022 <span class="talk-type">(Invited contribution talk)</span></li>
+    <li>Strategy for obtaining postdoc-positions and grants, Solarnet School, Tatranska Lomnica, Slovakia, 5–9 September 2022 <span class="talk-type">(Invited talk)</span></li>
+    <li>Solar Eruption Forecasting: A Grand Challenge, BSS Space Science and Technology, Révfülöp, Hungary, 1–5 August 2022 <span class="talk-type">(Invited talk)</span></li>
+    <li>Atmospheric oscillatory behaviour of magnetic helicity flux in eruptive and non-eruptive Active Regions, 44th COSPAR Scientific Assembly, Athens, Greece, 16–24 July 2022 <span class="talk-type">(Talk)</span></li>
+    <li>Solar flare prediction using magnetic field diagnostics above the photosphere, High Altitude Observatory / NCAR, Boulder, USA, 16 March 2022 <span class="talk-type">(Online invited seminar)</span></li>
+    <li>Predicting Solar Flares with Machine Learning, British Computer Society Mid-Wales Branch, Wales, UK, 14 March 2022 <span class="talk-type">(Online invited seminar)</span></li>
+    <li>Leap forward in space-weather forecast: Novel prediction of large energetic solar flares, Konkoly Observatory, Budapest, Hungary, 24 February 2022 <span class="talk-type">(Online invited seminar)</span></li>
+  </ul>
+  <h3 class="year">2021</h3>
+  <ul class="bullets">
+    <li>Lower solar atmospheric oscillatory behaviour of the magnetic helicity flux before a large solar eruption, RAS Specialist Discussion Meeting on 3D structure of the flare chromosphere, 10 December 2021 <span class="talk-type">(Online poster presentation)</span></li>
+    <li>Different oscillatory behaviour of the magnetic helicity flux between eruptive and non-eruptive ARs in the lower solar atmosphere, 6th European Solar Physics Meeting, 6–10 September 2021 <span class="talk-type">(Online poster presentation)</span></li>
+    <li>Different oscillatory behaviour of the magnetic helicity flux between flaring and non-flaring ARs in the lower solar atmosphere, RAS Specialist Discussion Meeting on MHD Oscillations and Waves, 24 May 2021 <span class="talk-type">(Online presentation)</span></li>
+  </ul>
+  <h3 class="year">2020</h3>
+  <ul class="bullets">
+    <li>Dynamic evolution of periodic magnetic helicity injection in 3-dimensional solar Active Regions, European Space Weather Symposium (ESWS2020), 2–6 November 2020 <span class="talk-type">(Online poster presentation)</span></li>
+    <li>Quo vadis, European space weather?, 2020 IEEE International Conference on Wireless for Space and Extreme Environments (WiSEE), October 2020 <span class="talk-type">(Invited talk)</span></li>
+    <li>Solar Flare Prediction Using Magnetic Field Diagnostics Above the Photosphere, European Solar Physics Online Seminars (ESPOS), 14 May 2020 <span class="talk-type">(Online presentation)</span></li>
+    <li>PRE-EST Board and SOLARNET general assembly, Prague, Czech Republic, 22–23 January 2020 <span class="talk-type">(Representative of Hungary)</span></li>
+    <li>EAST general assembly, Prague, Czech Republic, 21 January 2020 <span class="talk-type">(Representative of Hungary)</span></li>
+  </ul>
+  <h3 class="year">2019</h3>
+  <ul class="bullets">
+    <li>CHISCEL Coronagraph High-resolution Spectrometer for Coronal Emission Lines, SAMNet Discussion Meeting, University of Science and Technology of China, Hefei, China, 23 December 2019</li>
+    <li>Solar flare and CME prediction – Evolution of pre-flare and CME patterns, INAF Catania Astrophysical Observatory, Catania, Sicily, 27 November 2019 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>On the evolution of pre-flare and CME patterns in 3-dimensional real and simulated Active Regions, Space Climate 7 Symposium, Canton Orford, Québec, Canada, 8–11 July 2019 <span class="talk-type">(Poster)</span></li>
+    <li>Solar Physics Summer School at Raman Science Center, Indian Institute of Astrophysics, Leh, India, 10–16 June 2019 <span class="talk-type">(Sponsored by SOC)</span></li>
+    <li>Pre-flare dynamics of the flaring Active Regions in the lower solar atmosphere, 2nd China-Europe Solar Physics Meeting (CESPM 2019), Hvar, Croatia, 6–10 May 2019 <span class="talk-type">(Poster)</span></li>
+    <li>RAS Specialist Discussion Meeting: Flares on the Sun and stars: microflares, megaflares, and the largest flare of Solar Cycle 24, Royal Astronomical Society, London, UK, 12 April 2019</li>
+    <li>Flare &amp; CME forecasting in 3D solar ARs: From theory to SAMNet facility, Royal Astronomical Society, London, UK, 8 March 2019 <span class="talk-type">(Contribution to talk (presenter: Prof. R. Erdélyi))</span></li>
+    <li>PRE-EST Board, Brussels, Belgium, 22 January 2019 <span class="talk-type">(Representative of Hungary)</span></li>
+    <li>PRE-EST Review meeting, Brussels, Belgium, 23 January 2019 <span class="talk-type">(Representative of Hungary)</span></li>
+  </ul>
+  <h3 class="year">2018</h3>
+  <ul class="bullets">
+    <li>Pre-flare dynamics of the flaring Active Regions in the solar atmosphere, EST 1st Science Meeting 2018, Giardini Naxos, Italy, 11–15 June 2018 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+    <li>Tracking the Evolution of Flaring Active Regions in 3D, AOGS 15th Annual Meeting, Hawaii, USA, 3–8 June 2018 <span class="talk-type">(Invited talk (partially sponsored by SOC))</span></li>
+    <li>On the evolution of pre-flare patterns in a 3-dimensional solar Active Region, National Solar Observatory, Boulder, USA, 30 May 2018 <span class="talk-type">(Invited seminar (fully sponsored by host))</span></li>
+    <li>Pre-flare dynamics of Active Regions from photosphere to low solar atmosphere, Isradynamics 2018, Ein Bokek, Israel, 22–29 April 2018 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+    <li>Evolution of pre-flare patterns in a 3D solar Active Region, Queen&#x27;s University Belfast, Belfast, Northern Ireland, 12 April 2018 <span class="talk-type">(Invited seminar (fully sponsored by host))</span></li>
+    <li>Evolution of pre-flare patterns in the low solar atmosphere, Armagh Observatory, Armagh, Northern Ireland, 11 April 2018 <span class="talk-type">(Invited colloquium (fully sponsored by host))</span></li>
+    <li>Tracking the Evolution of Flaring Active Regions in 3D, Dynamic Sun II: Solar Magnetism from Interior to the Corona, Siem Reap, Cambodia, 12–16 February 2018 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+  </ul>
+  <h3 class="year">2017</h3>
+  <ul class="bullets">
+    <li>Evolution of flaring Active Regions, Our mysterious Sun: magnetic coupling between solar interior and atmosphere, Tbilisi, Georgia, 25–29 September 2017 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+    <li>Dynamic evolution of flaring Active Regions in 3D, The British-Russian Seminar of Young Scientists, Irkutsk, Russia, 18–21 September 2017 <span class="talk-type">(Talk (fully sponsored by SOC))</span></li>
+    <li>On the evolution of pre-flare patterns in 3-dimensional real and simulated Active Regions, IAUS335, Exeter, UK, 17–21 July 2017 <span class="talk-type">(Poster (fully sponsored by SOC; prize won))</span></li>
+    <li>On the evolution of pre-flare patterns in 3D real and simulated ARs, FLARECAST Science Workshop, Paris Meudon Observatory, France, 27–29 June 2017 <span class="talk-type">(Invited talk (fully sponsored by SOC))</span></li>
+    <li>Dynamics and evolution of pre-flare and CME states, USTC, Hefei, China, 24 March 2017 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>On forecasting solar eruptive events: Space Weather: A leap forward, Nanjing University, Nanjing, China, 23 March 2017 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>On the evolution of pre-flare patterns in a 3-dimensional solar Active Region, Peking University, Beijing, China, 17 March 2017 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+  </ul>
+  <h3 class="year">2016</h3>
+  <ul class="bullets">
+    <li>3D investigation of flaring solar Active Regions, Solarnet 5 Workshop, Belfast, Northern Ireland, 1–2 September 2016 <span class="talk-type">(Talk (fully sponsored by SOC))</span></li>
+    <li>New flare and CME forecast methods, Yunnan Observatories, Kunming, China, 18 August 2016 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>NLFFF and PFF reconstruction of the flaring ARs, Shandong University, Weihai, China, 11 August 2016 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>Dynamics of pre-flare in 3D, USTC, Hefei, China, 9 August 2016 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>Dynamics and evolution of pre-flare and CME states, AOGS, Beijing, China, 31 July – 5 August 2016 <span class="talk-type">(Talk)</span></li>
+    <li>On new behavioural patterns before flare and CME occurrence, Isradynamics 2016, Ein Bokek, Israel, 3–10 April 2016 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+    <li>Novel method to study the triggers of energetic solar phenomena: from flares to CMEs, Dynamic Sun I, Varanasi, India, 22–26 February 2016 <span class="talk-type">(Talk (fully sponsored by SOC))</span></li>
+    <li>Flare/CME prediction by 3D magnetic-field extrapolation models, Udaipur Solar Observatory, Udaipur, India, 17 February 2016 <span class="talk-type">(Invited colloquium (fully sponsored by host))</span></li>
+    <li>Flare forecast by 3D magnetic-field extrapolation models, Indian Institute of Astrophysics, Bengaluru, India, 4 February 2016 <span class="talk-type">(Invited seminar (fully sponsored by host))</span></li>
+  </ul>
+  <h3 class="year">2015</h3>
+  <ul class="bullets">
+    <li>On forecasting solar eruptive events by the sunspot dynamics detected at photospheric level, ESWW12, Oostende, Belgium, 24 November 2015 <span class="talk-type">(Talk)</span></li>
+    <li>Flare/CME prediction by photospheric data, NAOC (CAS), Beijing, China, 23 October 2015 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+    <li>Dynamical processes of Active Regions before flare and CME occurrence, Third UK-Ukraine-Spain Meeting, Lviv, Ukraine, 7–11 September 2015 <span class="talk-type">(Talk (fully sponsored by SOC))</span></li>
+    <li>Evolution of ARs at photosphere before flare and CME occurrence, Hinode-9 Science Meeting, Queen&#x27;s University Belfast, 14–18 September 2015 <span class="talk-type">(e-poster (fully sponsored by SOC))</span></li>
+  </ul>
+  <h3 class="year">2014</h3>
+  <ul class="bullets">
+    <li>How to predict flares accurately using sunspot dynamics?, Aberystwyth University, Aberystwyth, UK, 16 December 2014 <span class="talk-type">(Invited seminar (fully sponsored by host))</span></li>
+    <li>Role of sunspot group dynamics in flare and CME occurrence: A reliable new forecast, Greek Academy of Sciences, Athens, Greece, 9 December 2014 <span class="talk-type">(Invited colloquium (fully sponsored by host))</span></li>
+    <li>Forecasting flares by sunspot dynamics – A novel approach, Yunnan Observatory, Kunming, China, 26 November 2014 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+    <li>Flare and CME forecast by sunspot dynamics, NAOC (CAS), Beijing, China, 15 November 2014 <span class="talk-type">(Invited colloquium (fully sponsored by grant))</span></li>
+    <li>Flare and CME forecast by sunspot dynamics, Nanjing University, Nanjing, China, 6 November 2014 <span class="talk-type">(Invited seminar (fully sponsored by grant))</span></li>
+    <li>Flare prediction by sunspot dynamics, 2nd SOLARNET Workshop 2014, Tatranská Lomnica, Slovakia, 12–16 October 2014 <span class="talk-type">(Talk (partially sponsored by SOC))</span></li>
+    <li>Flare prediction by sunspot dynamics, University of Sheffield, 10 October 2014 <span class="talk-type">(Seminar)</span></li>
+    <li>Flare prediction by sunspot dynamics, University of Rome Tor Vergata, Italy, 23 September 2014 <span class="talk-type">(Invited colloquium (fully sponsored by host))</span></li>
+    <li>How to predict flares accurately using sunspot dynamics?, Queen&#x27;s University Belfast, 12 September 2014 <span class="talk-type">(Invited seminar (fully sponsored by host))</span></li>
+    <li>Applying sunspot dynamics prior to flare events: What is new?, Astronomical Institute of Slovak Academy of Sciences, Tatranská Lomnica, Slovakia, 11 August 2014 <span class="talk-type">(Invited colloquium (fully sponsored by host))</span></li>
+    <li>Sunspot dynamics prior to flares, Solar and Stellar Flares meeting, Prague, Czech Republic, 23–27 June 2014 <span class="talk-type">(Talk)</span></li>
+    <li>Signatures of imminent flares in the sunspot group evolution, eHeroes Second Annual Meeting, Davos, Switzerland, 10–12 March 2014 <span class="talk-type">(Talk)</span></li>
+  </ul>
+  <h3 class="year">2013</h3>
+  <ul class="bullets">
+    <li>10th European Space Weather Week, Antwerp, Belgium, 18–22 November 2013</li>
+    <li>Heaven and Earth in Attracting – Nature&#x27;s Secrets, Galyatető, Hungary, 20–22 September 2013</li>
+    <li>18th Workshop on Radiation Monitoring for the International Space Station, Budapest, Hungary, 3–5 September 2013</li>
+    <li>eHeroes First Annual Meeting, Leuven, Belgium, 5–7 February 2013</li>
+  </ul>
+  <h3 class="year">2012</h3>
+  <ul class="bullets">
+    <li>XIIth Hvar Astrophysical Colloquium, The Sun and Heliosphere, Hvar, Croatia, 3–7 September 2012</li>
+    <li>TECHDOSE IPR, Budapest, Hungary, 23 July 2012</li>
+    <li>TECHDOSE CDR, ESA-ESTEC, Noordwijk, Netherlands, 21–26 May 2012</li>
+    <li>eHeroes Kick-off Meeting, Rome, Italy, 6–8 March 2012</li>
+  </ul>
+</section>
+
+    </div>
+
+    <footer>
+      © Dr Marianna B. Korsós Google Site 
+    </footer>
+  </div>
+</body>
+</html>
